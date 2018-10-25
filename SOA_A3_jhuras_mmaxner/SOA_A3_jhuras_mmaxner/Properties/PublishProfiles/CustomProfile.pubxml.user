@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\Users\mmaxner1684\Desktop\SOA_A3_jhuras_mmaxner\SOA_A3_jhuras_mmaxner\SOA_A3_jhuras_mmaxner\localhost/webservies</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/SOA_A3_jhuras_mmaxner.dll">
+      <publishTime>10/25/2018 09:48:23</publishTime>
+    </File>
+    <File Include="bin/SOA_A3_jhuras_mmaxner.pdb">
+      <publishTime>10/25/2018 09:48:23</publishTime>
+    </File>
+    <File Include="ResolveIP.asmx">
+      <publishTime>10/19/2018 13:03:02</publishTime>
+    </File>
+    <File Include="TextService.asmx">
+      <publishTime>10/25/2018 09:38:57</publishTime>
+    </File>
+    <File Include="VinniesLoanService.asmx">
+      <publishTime>10/19/2018 13:01:42</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>10/25/2018 09:48:24</publishTime>
+    </File>
+  </ItemGroup>
+</Project>
