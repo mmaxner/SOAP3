@@ -16,16 +16,35 @@ namespace SOA_A3_jhuras_mmaxner
     [WebService(Namespace = "http://tempuri.org/")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
     [System.ComponentModel.ToolboxItem(false)]
-    public class ResolveIP : System.Web.Services.WebService
+    public class IPResolvingService : System.Web.Services.WebService
     {
+
+        SOAPLogger logger;
+        public IPResolvingService()
+        {
+            logger = new SOAPLogger("IPResolvingService");
+        }
         [WebMethod]
         public IPResolver.IPInfo GetInfo(string ip)
         {
-            if (!isValidIP(ip))
+            try
             {
-                throw new SoapException("Incorrect IP address format.", Soap12FaultCodes.RpcBadArgumentsFaultCode);
+                if (!isValidIP(ip))
+                {
+                    throw new SoapException("Incorrect IP address format.", Soap12FaultCodes.RpcBadArgumentsFaultCode);
+                }
+                return IPResolver.GetInfo(ip).Result;
             }
-            return IPResolver.GetInfo(ip).Result;
+            catch (SoapException ex)
+            {
+                logger.LogFault(ex);
+                throw ex;
+            }
+            catch (Exception ex)
+            {
+                logger.LogException(ex);
+                throw new Exception("Unknown Internal Error");
+            }
         }  
 
         private bool isValidIP(string ip)

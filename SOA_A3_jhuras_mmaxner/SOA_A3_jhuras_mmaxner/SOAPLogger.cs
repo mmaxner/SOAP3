@@ -34,5 +34,14 @@ namespace SOA_A3_jhuras_mmaxner
                 fs.Write(Encoding.ASCII.GetBytes(data), 0, data.Length);
             }
         }
+
+        public void LogException(Exception ex)
+        {
+            string data = DateTime.UtcNow.ToLongDateString() + " " + "Unexpected Exception" + " " + ex.Message + " " + ex.InnerException + " " + ex.StackTrace;
+            using (FileStream fs = File.Open(FileName, FileMode.OpenOrCreate))
+            {
+                fs.Write(Encoding.ASCII.GetBytes(data), 0, data.Length + 1);
+            }
+        }
     }
 }

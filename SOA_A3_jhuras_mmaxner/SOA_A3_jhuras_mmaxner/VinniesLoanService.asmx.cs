@@ -23,24 +23,37 @@ namespace SOA_A3_jhuras_mmaxner
         [WebMethod]
         public float LoanPayment(float principle, float rate, int payments)
         {
-            float result = 0f;
-
-            logger.LogStuff("principle: " + principle + ", rate: " + rate + ", payments: " + payments);
-
-            if (principle <= 0)
+            try
             {
-                throw new SoapException("Principle must be greater than 0.", Soap12FaultCodes.RpcBadArgumentsFaultCode);
-            }
-            else if (rate <= 0 || rate > 1)
-            {
-                throw new SoapException("Rate must be between 0 and 1.", Soap12FaultCodes.RpcBadArgumentsFaultCode);
-            }
-            else
-            {
-                result = LoanCalculator.CalculateLoan(principle, rate, payments);
-            }
+                float result = 0f;
 
-            return result;
+                logger.LogStuff("principle: " + principle + ", rate: " + rate + ", payments: " + payments);
+
+                if (principle <= 0)
+                {
+                    throw new SoapException("Principle must be greater than 0.", Soap12FaultCodes.RpcBadArgumentsFaultCode);
+                }
+                else if (rate <= 0 || rate > 1)
+                {
+                    throw new SoapException("Rate must be between 0 and 1.", Soap12FaultCodes.RpcBadArgumentsFaultCode);
+                }
+                else
+                {
+                    result = LoanCalculator.CalculateLoan(principle, rate, payments);
+                }
+
+                return result;
+            }
+            catch (SoapException ex)
+            {
+                logger.LogFault(ex);
+                throw ex;
+            }
+            catch (Exception ex)
+            {
+                logger.LogException(ex);
+                throw new Exception("Unknown Internal Error");
+            }
         }
 
         
