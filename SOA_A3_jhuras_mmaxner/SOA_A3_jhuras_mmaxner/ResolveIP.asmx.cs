@@ -16,18 +16,18 @@ namespace SOA_A3_jhuras_mmaxner
     [WebService(Namespace = "http://tempuri.org/")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
     [System.ComponentModel.ToolboxItem(false)]
-    // To allow this Web Service to be called from script, using ASP.NET AJAX, uncomment the following line. 
-    // [System.Web.Script.Services.ScriptService]
     public class ResolveIP : System.Web.Services.WebService
     {
-
         [WebMethod]
-        public IPInfo Resolve(string ip)
+        public IPResolver.IPInfo GetInfo(string ip)
         {
-            return GetInfo(ip).Result;
-        }
+            return IPResolver.GetInfo(ip).Result;
+        }  
+    }
 
-        private async System.Threading.Tasks.Task<IPInfo> GetInfo(string ipAddress)
+    public static class IPResolver
+    {
+        public static async System.Threading.Tasks.Task<IPInfo> GetInfo(string ipAddress)
         {
             Dictionary<string, string> parameters = new Dictionary<string, string>();
             parameters.Add("ipAddress", ipAddress);
@@ -42,11 +42,11 @@ namespace SOA_A3_jhuras_mmaxner
             {
                 throw new FaultException("Something went wrong accessing http://ws.cdyne.com.\n" + e.Message, new FaultCode("ConnectionFault"));
             }
-            
+
             return await fillIPInfoFromXMLAsync(result);
         }
 
-        private async System.Threading.Tasks.Task<IPInfo> fillIPInfoFromXMLAsync(string xmlString)
+        private static async System.Threading.Tasks.Task<IPInfo> fillIPInfoFromXMLAsync(string xmlString)
         {
             IPInfo ipinfo = new IPInfo();
             IPInfoProperty? ipinfoProperty = null;
@@ -131,7 +131,7 @@ namespace SOA_A3_jhuras_mmaxner
         ///     Produces a stream from a basic string.
         /// </summary>
         //https://stackoverflow.com/questions/1879395/how-do-i-generate-a-stream-from-a-string
-        private Stream GenerateStreamFromString(string s)
+        private static Stream GenerateStreamFromString(string s)
         {
             var stream = new MemoryStream();
             var writer = new StreamWriter(stream);

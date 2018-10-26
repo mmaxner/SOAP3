@@ -19,7 +19,7 @@ namespace SOA_A3_jhuras_mmaxner
     {
 
         [WebMethod]
-        public string Case(string incoming, uint flag)
+        public string CaseConvert(string incoming, uint flag)
         {
             string result = string.Empty;
 
