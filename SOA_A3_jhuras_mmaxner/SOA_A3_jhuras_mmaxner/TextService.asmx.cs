@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.ServiceModel;
-using System.Web;
-using System.Web.Services;
+﻿using System.Web.Services;
+using System.Web.Services.Protocols;
 
 namespace SOA_A3_jhuras_mmaxner
 {
@@ -25,11 +21,11 @@ namespace SOA_A3_jhuras_mmaxner
 
             if (incoming.Length == 0)
             {
-                throw new FaultException("The length of the incoming string must be greater than 0.", new FaultCode("ArgumentFault"));
+                throw new SoapException("The length of the incoming string must be greater than 0.", Soap12FaultCodes.RpcBadArgumentsFaultCode);
             }
             else if (flag == 0 || flag > 2)
             {
-                throw new FaultException("The flag must be either 1 or 2.", new FaultCode("ArgumentFault"));
+                throw new SoapException("The flag must be either 1 or 2.", Soap12FaultCodes.RpcBadArgumentsFaultCode);
             }
             else
             {

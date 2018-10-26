@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Services;
-using System.ServiceModel;
+using System.Web.Services.Protocols;
 
 namespace SOA_A3_jhuras_mmaxner
 {
@@ -26,11 +23,11 @@ namespace SOA_A3_jhuras_mmaxner
 
             if (principle <= 0)
             {
-                throw new FaultException("Principle must be greater than 0.", new FaultCode("ArgumentFault"));
+                throw new SoapException("Principle must be greater than 0.", Soap12FaultCodes.RpcBadArgumentsFaultCode);
             }
             else if (rate <= 0 || rate > 1)
             {
-                throw new FaultException("Rate must be between 0 and 1.", new FaultCode("ArgumentFault"));
+                throw new SoapException("Rate must be between 0 and 1.", Soap12FaultCodes.RpcBadArgumentsFaultCode);
             }
             else
             {

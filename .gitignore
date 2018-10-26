@@ -1,0 +1,14 @@
+
+*.lock
+*.cache
+*.cache
+SOA_A3_jhuras_mmaxner/UnitTestProject1/obj/project.assets.json
+SOA_A3_jhuras_mmaxner/.vs/config/applicationhost.config
+SOA_A3_jhuras_mmaxner/.vs/SOA_A3_jhuras_mmaxner/v15/.suo
+*.ide
+*.ide-shm
+*.ide-wal
+*.dll
+*.pdb
+SOA_A3_jhuras_mmaxner/UnitTestProject1/obj/project.assets.json
+SOA_A3_jhuras_mmaxner/UnitTestProject1/obj/UnitTestProject1.csproj.nuget.g.props

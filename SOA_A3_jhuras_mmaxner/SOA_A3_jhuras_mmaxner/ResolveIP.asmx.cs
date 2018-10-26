@@ -2,11 +2,11 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Web;
 using System.Web.Services;
+using System.Web.Services.Protocols;
 using System.Xml;
 using System.ServiceModel;
+using System.Text.RegularExpressions;
 
 namespace SOA_A3_jhuras_mmaxner
 {
@@ -21,8 +21,17 @@ namespace SOA_A3_jhuras_mmaxner
         [WebMethod]
         public IPResolver.IPInfo GetInfo(string ip)
         {
+            if (!isValidIP(ip))
+            {
+                throw new SoapException("Incorrect IP address format.", Soap12FaultCodes.RpcBadArgumentsFaultCode);
+            }
             return IPResolver.GetInfo(ip).Result;
         }  
+
+        private bool isValidIP(string ip)
+        {
+            return new Regex(@"\b(?:(?:[0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\.){3}(?:[0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\b").Match(ip).Success;
+        }
     }
 
     public static class IPResolver
