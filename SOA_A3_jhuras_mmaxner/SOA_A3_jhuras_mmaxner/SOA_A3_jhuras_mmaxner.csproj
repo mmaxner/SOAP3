@@ -72,6 +72,7 @@
       <DependentUpon>ResolveIP.asmx</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="SOAPLogger.cs" />
     <Compile Include="TextService.asmx.cs">
       <DependentUpon>TextService.asmx</DependentUpon>
       <SubType>Component</SubType>

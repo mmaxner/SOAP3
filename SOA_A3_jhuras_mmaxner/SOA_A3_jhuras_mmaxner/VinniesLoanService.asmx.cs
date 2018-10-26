@@ -18,11 +18,17 @@ namespace SOA_A3_jhuras_mmaxner
     [System.ComponentModel.ToolboxItem(false)]
     public class VinniesLoanService : System.Web.Services.WebService
     {
-
+        SOAPLogger logger;
+        public VinniesLoanService()
+        {
+            logger = new SOAPLogger("VinniesLoanService");
+        }
         [WebMethod]
         public float LoanPayment(float principle, float rate, int payments)
         {
             float result = 0f;
+
+            logger.LogStuff("principle: " + principle + ", rate: " + rate + ", payments: " + payments);
 
             if (principle <= 0)
             {

@@ -1,0 +1,11 @@
+
+*.lock
+*.ide
+*.ide
+*.ide-shm
+*.ide-wal
+SOA_A3_jhuras_mmaxner/.vs/SOA_A3_jhuras_mmaxner/v15/.suo
+*.ide
+*.ide
+*.pdb
+*.cache
