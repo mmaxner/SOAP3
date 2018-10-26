@@ -30,7 +30,7 @@ namespace SOA_A3_jhuras_mmaxner
             string data = DateTime.UtcNow.ToLongDateString() + " " + stuff;
             using (FileStream fs = File.Open(FileName, FileMode.OpenOrCreate))
             {
-                Console.Write(fs)
+                Console.Write(fs);
                 fs.Write(Encoding.ASCII.GetBytes(data), 0, data.Length);
             }
         }
