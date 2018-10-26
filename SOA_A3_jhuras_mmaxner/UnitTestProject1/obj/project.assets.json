@@ -5968,23 +5968,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\mmaxner1684\\.nuget\\packages\\": {},
+    "C:\\Users\\jhuras5806\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mmaxner1684\\Desktop\\Documents\\SOAP3\\SOA_A3_jhuras_mmaxner\\UnitTestProject1\\UnitTestProject1.csproj",
+      "projectUniqueName": "C:\\temp\\SOAP3\\SOA_A3_jhuras_mmaxner\\UnitTestProject1\\UnitTestProject1.csproj",
       "projectName": "UnitTestProject1",
-      "projectPath": "C:\\Users\\mmaxner1684\\Desktop\\Documents\\SOAP3\\SOA_A3_jhuras_mmaxner\\UnitTestProject1\\UnitTestProject1.csproj",
-      "packagesPath": "C:\\Users\\mmaxner1684\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mmaxner1684\\Desktop\\Documents\\SOAP3\\SOA_A3_jhuras_mmaxner\\UnitTestProject1\\obj\\",
+      "projectPath": "C:\\temp\\SOAP3\\SOA_A3_jhuras_mmaxner\\UnitTestProject1\\UnitTestProject1.csproj",
+      "packagesPath": "C:\\Users\\jhuras5806\\.nuget\\packages\\",
+      "outputPath": "C:\\temp\\SOAP3\\SOA_A3_jhuras_mmaxner\\UnitTestProject1\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\mmaxner1684\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\jhuras5806\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5997,8 +5997,8 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\Users\\mmaxner1684\\Desktop\\Documents\\SOAP3\\SOA_A3_jhuras_mmaxner\\SOA_A3_jhuras_mmaxner\\SOA_A3_jhuras_mmaxner.csproj": {
-              "projectPath": "C:\\Users\\mmaxner1684\\Desktop\\Documents\\SOAP3\\SOA_A3_jhuras_mmaxner\\SOA_A3_jhuras_mmaxner\\SOA_A3_jhuras_mmaxner.csproj"
+            "C:\\temp\\SOAP3\\SOA_A3_jhuras_mmaxner\\SOA_A3_jhuras_mmaxner\\SOA_A3_jhuras_mmaxner.csproj": {
+              "projectPath": "C:\\temp\\SOAP3\\SOA_A3_jhuras_mmaxner\\SOA_A3_jhuras_mmaxner\\SOA_A3_jhuras_mmaxner.csproj"
             }
           }
         }

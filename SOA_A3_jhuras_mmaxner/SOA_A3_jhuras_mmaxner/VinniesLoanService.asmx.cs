@@ -5,11 +5,8 @@ using System.Web.Services.Protocols;
 namespace SOA_A3_jhuras_mmaxner
 {
     /// <summary>
-    ///     Calculates the amount needed per payment to pay off a loan, given the amount, interest rate, and number of monthly payments
+    ///     Contains methods that calculate the amount needed per payment to pay off a loan, given the amount, interest rate, and number of monthly payments.
     /// </summary>
-    /// <param name="principle">Initial amount of the loan</param>
-    /// <param name="rate">The annual interest rate as a decimal. 15% = 0.15</param>
-    /// <param name="payments">The number of monthly payments that will be made</param>
     [WebService(Namespace = "http://tempuri.org/")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
     [System.ComponentModel.ToolboxItem(false)]
@@ -20,6 +17,14 @@ namespace SOA_A3_jhuras_mmaxner
         {
             logger = new SOAPLogger("VinniesLoanService");
         }
+
+        /// <summary>
+        ///     Calculates the amount needed per payment to pay off a loan, given the amount, interest rate, and number of monthly payments.
+        /// </summary>
+        /// <param name="principle">Initial amount of the loan.</param>
+        /// <param name="rate">The annual interest rate as a decimal. 15% = 0.15.</param>
+        /// <param name="payments">The number of monthly payments that will be made.</param>
+        /// <returns>The amount to be paid for each payment towards the principle.</returns>
         [WebMethod]
         public float LoanPayment(float principle, float rate, int payments)
         {
@@ -45,15 +50,19 @@ namespace SOA_A3_jhuras_mmaxner
 
         
     }
+
+    /// <summary>
+    ///     Contains methods that calculate the amount needed per payment to pay off a loan, given the amount, interest rate, and number of monthly payments.
+    /// </summary>
     public static class LoanCalculator
     {
         /// <summary>
-        ///     Calculates the amount needed per payment to pay off a loan, given the amount, interest rate, and number of monthly payments
+        ///     Calculates the amount needed per payment to pay off a loan, given the amount, interest rate, and number of monthly payments.
         /// </summary>
-        /// <param name="principle">Initial amount of the loan</param>
-        /// <param name="rate">The annual interest rate as a decimal. 15% = 0.15</param>
-        /// <param name="payments">The number of monthly payments that will be made</param>
-        /// <returns></returns>
+        /// <param name="principle">Initial amount of the loan.</param>
+        /// <param name="rate">The annual interest rate as a decimal. 15% = 0.15.</param>
+        /// <param name="payments">The number of monthly payments that will be made.</param>
+        /// <returns>The amount to be paid for each payment towards the principle.</returns>
         public static float CalculateLoan(float principle, float rate, int payments)
         {
             float amortized_rate = rate / 12.0f;    // the rate is annual, but payments are monthly. 

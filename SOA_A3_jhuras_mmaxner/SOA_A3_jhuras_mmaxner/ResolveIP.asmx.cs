@@ -11,13 +11,18 @@ using System.Text.RegularExpressions;
 namespace SOA_A3_jhuras_mmaxner
 {
     /// <summary>
-    /// Summary description for ResolveIP
+    /// Gets geographical information from an ip address from another web service.
     /// </summary>
     [WebService(Namespace = "http://tempuri.org/")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
     [System.ComponentModel.ToolboxItem(false)]
     public class ResolveIP : System.Web.Services.WebService
     {
+        /// <summary>
+        /// Checks for a valid formatted IP address and calls another webservice for the IPInfo results.
+        /// </summary>
+        /// <param name="ip">The IP address to fetch geographical information from.</param>
+        /// <returns>An IPInfo struct containing geographical information based on the IP address.</returns>
         [WebMethod]
         public IPResolver.IPInfo GetInfo(string ip)
         {
@@ -34,8 +39,16 @@ namespace SOA_A3_jhuras_mmaxner
         }
     }
 
+    /// <summary>
+    /// Contains methods which makes a call to another web service to get geographical information based on an ip address.
+    /// </summary>
     public static class IPResolver
     {
+        /// <summary>
+        /// Makes a call to another web service to get geographical information based on an ip address.
+        /// </summary>
+        /// <param name="ipAddress">The IP address to fetch geographical information from.</param>
+        /// <returns>An IPInfo struct containing geographical information based on the IP address.</returns>
         public static async System.Threading.Tasks.Task<IPInfo> GetInfo(string ipAddress)
         {
             Dictionary<string, string> parameters = new Dictionary<string, string>();
@@ -55,6 +68,11 @@ namespace SOA_A3_jhuras_mmaxner
             return await fillIPInfoFromXMLAsync(result);
         }
 
+        /// <summary>
+        /// Creates and returns an IPInfo based on an XML string containing IPInfo properties.
+        /// </summary>
+        /// <param name="xmlString">The XML string containing IPInfo data.</param>
+        /// <returns>An IPInfo struct containing geographical information based on the IP address.</returns>
         private static async System.Threading.Tasks.Task<IPInfo> fillIPInfoFromXMLAsync(string xmlString)
         {
             IPInfo ipinfo = new IPInfo();
@@ -139,6 +157,8 @@ namespace SOA_A3_jhuras_mmaxner
         /// <summary>
         ///     Produces a stream from a basic string.
         /// </summary>
+        /// <param name="s">The string to be used for the stream.</param>
+        /// <returns>A stream based on the string provided.</returns>
         //https://stackoverflow.com/questions/1879395/how-do-i-generate-a-stream-from-a-string
         private static Stream GenerateStreamFromString(string s)
         {
