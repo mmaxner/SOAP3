@@ -5,7 +5,7 @@ using System.Web.Services.Protocols;
 namespace SOA_A3_jhuras_mmaxner
 {
     /// <summary>
-    /// Summary description for TextService
+    /// Contains methods which convert a string to all uppercase or all lowercase.
     /// </summary>
     [WebService(Namespace = "http://tempuri.org/")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
@@ -20,6 +20,12 @@ namespace SOA_A3_jhuras_mmaxner
             logger = new SOAPLogger("TextService");
         }
 
+        /// <summary>
+        /// Converts a string to all uppercase or all lowercase.
+        /// </summary>
+        /// <param name="incoming">The string to be converted.</param>
+        /// <param name="flag">A flag (1 or 2) that represents whether the string should be converted to all uppercase or all lowercase.</param>
+        /// <returns>The converted string.</returns>
         [WebMethod]
         public string CaseConvert(string incoming, uint flag)
         {
@@ -57,8 +63,17 @@ namespace SOA_A3_jhuras_mmaxner
         
     }
 
+    /// <summary>
+    /// Contains methods which converts a string to all uppercase or all lowercase.
+    /// </summary>
     public static class TextServiceLogic
     {
+        /// <summary>
+        /// Converts a string to all uppercase or all lowercase.
+        /// </summary>
+        /// <param name="incoming">The string to be converted.</param>
+        /// <param name="flag">A flag (1 or 2) that represents whether the string should be converted to all uppercase or all lowercase.</param>
+        /// <returns>The converted string.</returns>
         public static string CaseConvert(string incoming, uint flag)
         {
             return flag == 1 ? incoming.ToUpper() : incoming.ToLower();
