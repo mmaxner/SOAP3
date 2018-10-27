@@ -6,6 +6,9 @@ namespace UnitTestProject1
     [TestClass]
     public class TextCasingUnitTest
     {
+        // test that the method can convert to upper case
+        // input: a sentence, and a variety of symbols that shouldn;t change with case change
+        // expected output: the same sentence all uppercase, non-letter characters are the same
         [TestMethod]
         public void ToUpperTest()
         {
@@ -14,6 +17,10 @@ namespace UnitTestProject1
             string result = TextServiceLogic.CaseConvert(OrginalCaseText, 1);
             Assert.AreEqual(UpperCaseText, result);
         }
+
+        // test that the method can convert to lower case
+        // input: a sentence, and a variety of symbols that shouldn't change with case change
+        // expected output: the same sentence all lowercase, non-letter characters are the same
         [TestMethod]
         public void ToLowerTest()
         {
@@ -22,6 +29,10 @@ namespace UnitTestProject1
             string result = TextServiceLogic.CaseConvert(OrginalCaseText, 2);
             Assert.AreEqual(UpperCaseText, result);
         }
+
+        // test that the method works with an empty input
+        // input: an empty string
+        // expected output: an empty string
         [TestMethod]
         public void EmptyInputTest()
         {
@@ -36,6 +47,9 @@ namespace UnitTestProject1
     [TestClass]
     public class LoanCalculatorUnitTest
     {
+        // test that the method can calculate an normal loan value
+        // input: a moderate principle, rate, and number of payments
+        // expected output: the correct amount needed per payment
         [TestMethod]
         public void NormalTest()
         {
@@ -47,6 +61,9 @@ namespace UnitTestProject1
             Assert.AreEqual(ExpectedAmount.ToString("0.00"), result.ToString("0.00"));
         }
 
+        // test that the method works when the principle is 0
+        // input: a principle of 0, and a moderate rate and number of payments
+        // expected output: 0
         [TestMethod]
         public void ZeroPrincipleTest()
         {
@@ -58,6 +75,10 @@ namespace UnitTestProject1
             Assert.AreEqual(ExpectedAmount.ToString("0.00"), result.ToString("0.00"));
         }
 
+        // test that the method works when the rate is zero
+        // note: per the formula used for this assignment, the expected value is NaN
+        // input: a rate of zero, a moderate principle and number of payments
+        // expected output: NaN
         [TestMethod]
         public void ZeroRateTest()
         {
@@ -69,6 +90,9 @@ namespace UnitTestProject1
             Assert.AreEqual(ExpectedAmount, result.ToString("0.00"));
         }
 
+        // test that the method works when the payments are 0
+        // input: a payments of zero, a moderate principle and rate
+        // expected output: NaN
         [TestMethod]
         public void ZeroPayments()
         {
@@ -80,6 +104,9 @@ namespace UnitTestProject1
             Assert.AreEqual(ExpectedAmount, result.ToString("0.00"));
         }
 
+        // test that the method works when the rate is very high
+        // input: a very high rate, moderate principle, and moderate payments
+        // expected output: the correct amount needed per payment
         [TestMethod]
         public void HighInterestTest()
         {
@@ -97,6 +124,7 @@ namespace UnitTestProject1
     [TestClass]
     public class IPResolverTest
     {
+        // test for google.com
         [TestMethod]
         public void IPTest1()
         {
@@ -111,6 +139,7 @@ namespace UnitTestProject1
             Assert.AreEqual(expected, result);
         }
 
+        // test for cool-math-games.com
         [TestMethod]
         public void IPTest2()
         {
@@ -125,6 +154,7 @@ namespace UnitTestProject1
             Assert.AreEqual(expected, result);
         }
 
+        // test for canada.ca
         [TestMethod]
         public void IPTest3()
         {
@@ -139,6 +169,7 @@ namespace UnitTestProject1
             Assert.AreEqual(expected, result);
         }
 
+        // test for paizo.com
         [TestMethod]
         public void IPTest4()
         {
@@ -155,6 +186,8 @@ namespace UnitTestProject1
             Assert.AreEqual(expected, result);
         }
 
+        // test for a fake ip
+        // expected output: not found
         [TestMethod]
         public void IPTest5()
         {
