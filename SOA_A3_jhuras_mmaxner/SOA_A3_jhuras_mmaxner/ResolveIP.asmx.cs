@@ -16,11 +16,11 @@ namespace SOA_A3_jhuras_mmaxner
     [WebService(Namespace = "http://tempuri.org/")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
     [System.ComponentModel.ToolboxItem(false)]
-    public class IPResolvingService : System.Web.Services.WebService
+    public class ResolveIP : System.Web.Services.WebService
     {
 
         SOAPLogger logger;
-        public IPResolvingService()
+        public ResolveIP()
         {
             logger = new SOAPLogger("IPResolvingService");
         }

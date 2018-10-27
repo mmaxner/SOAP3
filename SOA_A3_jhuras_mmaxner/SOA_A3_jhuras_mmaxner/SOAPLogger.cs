@@ -13,7 +13,7 @@ namespace SOA_A3_jhuras_mmaxner
         private string FileName;
         public SOAPLogger(string ServiceName)
         {
-            FileName = ServiceName + ".log";
+            FileName = "C:/Windows/Temp/" + ServiceName + ".log";
         }
 
         public void LogFault(SoapException fault)
@@ -21,7 +21,7 @@ namespace SOA_A3_jhuras_mmaxner
             string data = DateTime.UtcNow.ToLongDateString() + " " + fault.Code + " " + fault.Message + " " + fault.InnerException + " " + fault.StackTrace;
             using (FileStream fs = File.Open(FileName, FileMode.OpenOrCreate))
             {
-                fs.Write(Encoding.ASCII.GetBytes(data), 0, data.Length + 1);
+                fs.Write(Encoding.ASCII.GetBytes(data), 0, data.Length);
             }
         }
 
@@ -40,7 +40,7 @@ namespace SOA_A3_jhuras_mmaxner
             string data = DateTime.UtcNow.ToLongDateString() + " " + "Unexpected Exception" + " " + ex.Message + " " + ex.InnerException + " " + ex.StackTrace;
             using (FileStream fs = File.Open(FileName, FileMode.OpenOrCreate))
             {
-                fs.Write(Encoding.ASCII.GetBytes(data), 0, data.Length + 1);
+                fs.Write(Encoding.ASCII.GetBytes(data), 0, data.Length);
             }
         }
     }
