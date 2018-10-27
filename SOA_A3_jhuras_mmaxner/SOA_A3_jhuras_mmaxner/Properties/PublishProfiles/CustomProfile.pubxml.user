@@ -10,10 +10,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
   </PropertyGroup>
   <ItemGroup>
     <File Include="bin/SOA_A3_jhuras_mmaxner.dll">
-      <publishTime>10/26/2018 13:21:59</publishTime>
+      <publishTime>10/26/2018 14:45:06</publishTime>
     </File>
     <File Include="bin/SOA_A3_jhuras_mmaxner.pdb">
-      <publishTime>10/26/2018 13:21:59</publishTime>
+      <publishTime>10/26/2018 14:45:06</publishTime>
     </File>
     <File Include="ResolveIP.asmx">
       <publishTime>10/26/2018 08:47:56</publishTime>
