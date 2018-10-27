@@ -5,12 +5,6 @@ C:\Users\mmaxner1684\Desktop\SOA_A3_jhuras_mmaxner\SOA_A3_jhuras_mmaxner\SOA_A3_
 C:\Users\mmaxner1684\Desktop\SOA_A3_jhuras_mmaxner\SOA_A3_jhuras_mmaxner\SOA_A3_jhuras_mmaxner\obj\Debug\SOA_A3_jhuras_mmaxner.csproj.CoreCompileInputs.cache
 C:\Users\mmaxner1684\Desktop\SOA_A3_jhuras_mmaxner\SOA_A3_jhuras_mmaxner\SOA_A3_jhuras_mmaxner\obj\Debug\SOA_A3_jhuras_mmaxner.dll
 C:\Users\mmaxner1684\Desktop\SOA_A3_jhuras_mmaxner\SOA_A3_jhuras_mmaxner\SOA_A3_jhuras_mmaxner\obj\Debug\SOA_A3_jhuras_mmaxner.pdb
-C:\Users\mmaxner1684\Desktop\Documents\SOAP3\SOA_A3_jhuras_mmaxner\SOA_A3_jhuras_mmaxner\bin\SOA_A3_jhuras_mmaxner.dll.config
-C:\Users\mmaxner1684\Desktop\Documents\SOAP3\SOA_A3_jhuras_mmaxner\SOA_A3_jhuras_mmaxner\bin\SOA_A3_jhuras_mmaxner.dll
-C:\Users\mmaxner1684\Desktop\Documents\SOAP3\SOA_A3_jhuras_mmaxner\SOA_A3_jhuras_mmaxner\bin\SOA_A3_jhuras_mmaxner.pdb
-C:\Users\mmaxner1684\Desktop\Documents\SOAP3\SOA_A3_jhuras_mmaxner\SOA_A3_jhuras_mmaxner\obj\Debug\SOA_A3_jhuras_mmaxner.csproj.CoreCompileInputs.cache
-C:\Users\mmaxner1684\Desktop\Documents\SOAP3\SOA_A3_jhuras_mmaxner\SOA_A3_jhuras_mmaxner\obj\Debug\SOA_A3_jhuras_mmaxner.dll
-C:\Users\mmaxner1684\Desktop\Documents\SOAP3\SOA_A3_jhuras_mmaxner\SOA_A3_jhuras_mmaxner\obj\Debug\SOA_A3_jhuras_mmaxner.pdb
 C:\temp\SOAP3\SOA_A3_jhuras_mmaxner\SOA_A3_jhuras_mmaxner\bin\SOA_A3_jhuras_mmaxner.dll.config
 C:\temp\SOAP3\SOA_A3_jhuras_mmaxner\SOA_A3_jhuras_mmaxner\bin\SOA_A3_jhuras_mmaxner.dll
 C:\temp\SOAP3\SOA_A3_jhuras_mmaxner\SOA_A3_jhuras_mmaxner\bin\SOA_A3_jhuras_mmaxner.pdb
