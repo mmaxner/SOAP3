@@ -39,6 +39,7 @@ namespace SOA_A3_jhuras_mmaxner
                 }
                 else if (flag == 0 || flag > 2)
                 {
+					logger.LogThroughService();
                     throw new SoapException("The flag must be either 1 or 2.", Soap12FaultCodes.RpcBadArgumentsFaultCode);
                 }
                 else

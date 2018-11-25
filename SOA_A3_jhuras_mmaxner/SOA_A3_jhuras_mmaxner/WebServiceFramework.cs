@@ -50,7 +50,7 @@ namespace SOA___Assignment_2___Web_Services
 		private static HttpWebRequest createWebRequest(string url, string action, string serviceNamespace)
 		{
 			HttpWebRequest webRequest = (HttpWebRequest)WebRequest.Create(url);
-			webRequest.Headers.Add("SOAPAction", serviceNamespace + action);
+			webRequest.Headers.Add("SOAPAction", "\"" + serviceNamespace + action + "\"");
 			webRequest.ContentType = "text/xml;charset=\"utf-8\"";
 			webRequest.Accept = "text/xml";
 			webRequest.Method = "POST";
@@ -64,20 +64,21 @@ namespace SOA___Assignment_2___Web_Services
 		{
 			XmlDocument soapEnvelopeDocument = new XmlDocument();
 			string loadXmlData =
-				@"<soap:Envelope xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns:xsd=""http://www.w3.org/2001/XMLSchema"" xmlns:soap=""http://schemas.xmlsoap.org/soap/envelope/"">
-					<soap:Body>";
+				@"<soapenv:Envelope xmlns:soapenv=""http://schemas.xmlsoap.org/soap/envelope/"" xmlns:soap=""http://SOAPLogger/"">
+					<soapenv:Header/>
+					<soapenv:Body>";
 
-			loadXmlData += string.Format(@"<{0} xmlns=""{1}"">", action, serviceNamespace);
+			loadXmlData += string.Format(@"<soap:{0}>", action, serviceNamespace);
 
 			// do this part in a for loop for however many arguments we need?
             for (int i = 0; i < parameters.Count; i++)
             {
                 loadXmlData +=  string.Format("<{0}>{1}</{0}>", parameters.ElementAt(i).Key, parameters.ElementAt(i).Value);
             }
-			loadXmlData += string.Format(@"</{0}>", action);
+			loadXmlData += string.Format(@"</soap:{0}>", action);
 			loadXmlData +=
-					@"</soap:Body>
-				</soap:Envelope>";
+					@"</soapenv:Body>
+				</soapenv:Envelope>";
 			soapEnvelopeDocument.LoadXml(loadXmlData);
 			return soapEnvelopeDocument;
 		}

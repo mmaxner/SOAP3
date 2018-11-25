@@ -67,6 +67,7 @@
     <Content Include="TextService.asmx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EncryptionTool.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ResolveIP.asmx.cs">
       <DependentUpon>ResolveIP.asmx</DependentUpon>

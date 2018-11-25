@@ -12,3 +12,10 @@ C:\temp\SOAP3\SOA_A3_jhuras_mmaxner\SOA_A3_jhuras_mmaxner\obj\Debug\SOA_A3_jhura
 C:\temp\SOAP3\SOA_A3_jhuras_mmaxner\SOA_A3_jhuras_mmaxner\obj\Debug\SOA_A3_jhuras_mmaxner.csproj.CoreCompileInputs.cache
 C:\temp\SOAP3\SOA_A3_jhuras_mmaxner\SOA_A3_jhuras_mmaxner\obj\Debug\SOA_A3_jhuras_mmaxner.dll
 C:\temp\SOAP3\SOA_A3_jhuras_mmaxner\SOA_A3_jhuras_mmaxner\obj\Debug\SOA_A3_jhuras_mmaxner.pdb
+C:\Users\mmaxn\Documents\SOAP3\SOA_A3_jhuras_mmaxner\SOA_A3_jhuras_mmaxner\obj\Debug\SOA_A3_jhuras_mmaxner.csprojAssemblyReference.cache
+C:\Users\mmaxn\Documents\SOAP3\SOA_A3_jhuras_mmaxner\SOA_A3_jhuras_mmaxner\obj\Debug\SOA_A3_jhuras_mmaxner.csproj.CoreCompileInputs.cache
+C:\Users\mmaxn\Documents\SOAP3\SOA_A3_jhuras_mmaxner\SOA_A3_jhuras_mmaxner\bin\SOA_A3_jhuras_mmaxner.dll.config
+C:\Users\mmaxn\Documents\SOAP3\SOA_A3_jhuras_mmaxner\SOA_A3_jhuras_mmaxner\bin\SOA_A3_jhuras_mmaxner.dll
+C:\Users\mmaxn\Documents\SOAP3\SOA_A3_jhuras_mmaxner\SOA_A3_jhuras_mmaxner\bin\SOA_A3_jhuras_mmaxner.pdb
+C:\Users\mmaxn\Documents\SOAP3\SOA_A3_jhuras_mmaxner\SOA_A3_jhuras_mmaxner\obj\Debug\SOA_A3_jhuras_mmaxner.dll
+C:\Users\mmaxn\Documents\SOAP3\SOA_A3_jhuras_mmaxner\SOA_A3_jhuras_mmaxner\obj\Debug\SOA_A3_jhuras_mmaxner.pdb
